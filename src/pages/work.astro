@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const events = [
+  { name: "Ondo Summit", year: "2025", location: "New York City, USA", tagline: "250 invite-only institutional investors at Lincoln Center", slug: "/work/OndoSummit2025" },
+  { name: "HederaCon", year: "2025", location: "Denver, USA", tagline: "1-day developer conference adjacent to ETH Denver, closing party at Meow Wolf", slug: "/work/HederaCon2025" },
+  { name: "Chainlink SmartCon", year: "2024", location: "Hong Kong", tagline: "4-day flagship during Hong Kong Fintech Week — 2,000 attendees, 4 stages, Hacker House", slug: "/work/SmartCon2024" },
+  { name: "Nearcon", year: "2024", location: "Bangkok, Thailand", tagline: "NEAR Protocol's flagship annual gathering for 1,500 attendees", slug: "/work/Nearcon2024" },
+  { name: "Stacks Bitcoin Unleashed", year: "2024", location: "Singapore", tagline: "Half-day community event alongside Token2049 at the Fullerton Hotel", slug: "/work/StacksUnleashed2024" },
+  { name: "Chainlink SmartCon", year: "2023", location: "Barcelona, Spain", tagline: "4 stages, 1,500 attendees, Hacker House — capped with a Barcelona closing night", slug: "/work/SmartCon2023" },
+  { name: "Nearcon", year: "2023", location: "Lisbon, Portugal", tagline: "5 venues, 2,000 attendees, 30 sponsors — run through a natural disaster", slug: "/work/Nearcon2023" },
+  { name: "Stacks Bitcoin Unleashed", year: "2023", location: "London, UK", tagline: "Protein Studios in Shoreditch — warehouse production, 2 stages, and a Bitcoin NFT gallery", slug: "/work/StacksUnleashed2023" },
+  { name: "Stacks Bitcoin Unleashed", year: "2022", location: "Miami, USA", tagline: "Art Deco venue, NFT gallery, and an opening night in Wynwood — adjacent to Bitcoin Miami", slug: "/work/StacksUnleashed2022" },
+  { name: "Solana Breakpoint", year: "2022", location: "Lisbon, Portugal", tagline: "Solana's global flagship developer conference", slug: "/work/Breakpoint2022" },
+  { name: "Solana Saga Phone Launch", year: "2022", location: "New York City, USA", tagline: "Big reveal at the New York Times Center — less than 30 days to execute", slug: "/work/SagaPhone2022" },
+  { name: "Nearcon", year: "2022", location: "Lisbon, Portugal", tagline: "Abandoned warehouse to crypto wonderland in 90 days — produced through a hurricane", slug: "/work/Nearcon2022" },
+  { name: "Solana Breakpoint", year: "2021", location: "Lisbon, Portugal", tagline: "2,000 attendees across 5 venues — the first major event post-COVID", slug: "/work/Breakpoint2021" },
+];
+---
+<BaseLayout title="Work — Amplified Event Strategy" bodyClass="inner-page">
+
+  <header class="container-fluid header">
+    <div class="row">
+      <div class="col">
+        <div class="extra-lg-text">
+          <span>Events That</span><br />
+          <span>Defined an</span><br />
+          <span>Industry.</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid portfolio-section">
+    <div class="portfolio-grid">
+      {events.map((event) => (
+        <a href={event.slug} class="event-card">
+          <div class="event-card-photo"></div>
+          <div class="event-card-info">
+            <div class="event-card-meta">{event.location} · {event.year}</div>
+            <div class="event-card-name">{event.name}</div>
+            <div class="event-card-tagline">{event.tagline}</div>
+            <div class="event-card-cta">View Event →</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+
+</BaseLayout>

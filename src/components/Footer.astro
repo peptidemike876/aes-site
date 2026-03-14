@@ -1,0 +1,32 @@
+---
+import SocialLinks from './SocialLinks.astro';
+---
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div class="site-footer__col site-footer__col--brand">
+      <a href="/"><img src="/images/AES_White_Horizontal.png" alt="AES" class="site-footer__logo" /></a>
+      <p class="site-footer__tagline">Global Events. Exceptional Experiences. Delivered.</p>
+    </div>
+    <div class="site-footer__col site-footer__col--nav">
+      <nav>
+        <ul class="site-footer__nav">
+          <li><a href="/" data-text="Home">Home</a></li>
+          <li><a href="/about" data-text="About">About</a></li>
+          <li><a href="/work" data-text="Work">Work</a></li>
+          <li><a href="/contact" data-text="Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="site-footer__col site-footer__col--contact">
+      <p class="site-footer__contact-label">Get in touch</p>
+      <a href="mailto:hello@amplifiedeventstrategy.com" class="site-footer__email">hello@amplifiedeventstrategy.com</a>
+      <a href="/contact" class="cr-btn site-footer__cta">Work with us</a>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span class="site-footer__copy">&copy; {new Date().getFullYear()} Amplified Event Strategy. All rights reserved.</span>
+    <div class="site-footer__social">
+      <SocialLinks />
+    </div>
+  </div>
+</footer>

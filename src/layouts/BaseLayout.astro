@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  bodyClass?: string;
+}
+
+const { title = 'CRE8', bodyClass = '' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/wpp6dpo.css" />
+  </head>
+  <body class={bodyClass}>
+    <Nav />
+    <slot />
+    <Footer />
+
+    <script>
+      import { animate } from 'animejs';
+      import ScrollReveal from 'scrollreveal';
+
+      window.addEventListener('load', () => {
+        // ScrollReveal animations
+        const sr = ScrollReveal();
+
+        sr.reveal(
+          '.extra-lg-text, .extra-lg-text span, .lg-text, .lg-text span, .boxy .title, .post-box .title, .post-header .title, .boxy .slg-text',
+          { duration: 800, distance: '50px', interval: 100 }
+        );
+        sr.reveal(
+          '.boxy .text li, .boxy .bottom-text .link, .boxy .bottom-text .text',
+          { duration: 800, scale: 0.8, distance: '50px', interval: 50 }
+        );
+        sr.reveal(
+          '.normal-text p, .normal-lg-text p, .clients-logos .logo-holder, .text-box .title, .text-box p, .team-photos, .post-box, .post-header, .post-content',
+          { duration: 1000, interval: 100 }
+        );
+        sr.reveal(
+          '.clients-logos .logo-holder, .cr-btn, .footer .contact-info-holder, .few-contact .contact-info-holder, .job-box .title, .job-box .subtitle, .people-box .title, .people-box .subtitle, .post-box .text, .post-header .text, .post-content h1, .post-content p, .social-row .social-link-holder, .project-info h2, .project-imgs .img-holder',
+          { duration: 800, interval: 50 }
+        );
+
+        // Hide mouse-scroll indicator on scroll
+        const mouseScroll = document.querySelector<HTMLElement>('.header .mouse-scroll');
+        window.addEventListener('scroll', () => {
+          if (mouseScroll && window.scrollY > 50) mouseScroll.classList.add('hide');
+        }, { passive: true });
+
+        // Animate team photos (infinite scroll marquee)
+        const photosHolder = document.querySelector<HTMLElement>('.team-photos .team-photos-holder');
+        if (photosHolder) {
+          const origPhotos = Array.from(
+            photosHolder.querySelectorAll<HTMLElement>('.photo-holder')
+          );
+          origPhotos.forEach((el) => photosHolder.appendChild(el.cloneNode(true)));
+
+          const totalItems = photosHolder.querySelectorAll('.photo-holder').length;
+          const style = origPhotos[0] ? getComputedStyle(origPhotos[0]) : null;
+          const itemWidth = (origPhotos[0]?.offsetWidth ?? 0) +
+            parseFloat(style?.marginRight || '0') +
+            parseFloat(style?.marginLeft || '0');
+          const totalWidth = itemWidth * totalItems;
+
+          animate(photosHolder, {
+            translateX: { from: '0px', to: `-${totalWidth / 2 - 18}px` },
+            duration: 50000,
+            ease: 'linear',
+            loop: true,
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

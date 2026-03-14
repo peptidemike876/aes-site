@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv solana-breakpoint-2021.astro Breakpoint2021.astro)",
+      "Bash(mv solana-breakpoint-2022.astro Breakpoint2022.astro)",
+      "Bash(mv ondo-summit-2025.astro OndoSummit2025.astro)",
+      "Bash(mv hederacon-2025.astro HederaCon2025.astro)"
+    ]
+  }
+}
