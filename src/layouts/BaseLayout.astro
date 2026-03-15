@@ -5,10 +5,19 @@ import Footer from '../components/Footer.astro';
 
 interface Props {
   title?: string;
+  description?: string;
+  ogImage?: string;
   bodyClass?: string;
 }
 
-const { title = 'AES', bodyClass = '' } = Astro.props;
+const {
+  title = 'Amplified Event Strategy',
+  description = 'Amplified Event Strategy is the go-to crypto events agency since 2015. We\'ve produced 100+ flagship events globally — including CoinDesk Consensus, Solana Breakpoint, Nearcon, and the Ondo Summit.',
+  ogImage = '/images/og-default.png',
+  bodyClass = ''
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 <!doctype html>
 <html lang="en">
@@ -16,6 +25,24 @@ const { title = 'AES', bodyClass = '' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL(ogImage, Astro.site)} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/fontawesome-all.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/wpp6dpo.css" />
   </head>
