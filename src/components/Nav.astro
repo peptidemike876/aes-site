@@ -1,16 +1,24 @@
 ---
+import MobileMenu from './MobileMenu.astro';
+const { pathname } = Astro.url;
+const isActive = (path: string) => {
+  if (path === '/') return pathname === '/';
+  return pathname.startsWith(path);
+};
 ---
 <nav class="cnav">
   <div class="cnav-inner">
     <a class="cnav-logo" href="/"><img src="/images/AES_White_Horizontal.png" alt="AES" /></a>
     <ul class="cnav-links">
-      <li><a href="/" data-text="Home">Home</a></li>
-      <li><a href="/about" data-text="About">About</a></li>
-      <li><a href="/work" data-text="Work">Work</a></li>
-      <li><a href="/contact" data-text="Contact">Contact</a></li>
+      <li><a href="/" data-text="Home" class={isActive('/') ? 'active' : ''}>Home</a></li>
+      <li><a href="/about" data-text="About" class={isActive('/about') ? 'active' : ''}>About</a></li>
+      <li><a href="/work" data-text="Work" class={isActive('/work') ? 'active' : ''}>Work</a></li>
+      <li><a href="/contact" data-text="Contact" class={isActive('/contact') ? 'active' : ''}>Contact</a></li>
     </ul>
   </div>
 </nav>
+
+<MobileMenu />
 
 <script>
   const nav = document.querySelector('.cnav');
@@ -19,4 +27,19 @@
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  // Mobile menu toggle
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.main-menu');
+  toggle?.addEventListener('click', () => {
+    toggle.classList.toggle('open');
+    menu?.classList.toggle('opened');
+  });
+  // Close menu when a link is clicked
+  menu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      toggle?.classList.remove('open');
+      menu.classList.remove('opened');
+    });
+  });
 </script>
