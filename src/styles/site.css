@@ -16,7 +16,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "montserrat", sans-serif;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .cr-btn {
@@ -390,7 +390,11 @@ body.menu-open {
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 8rem 3.5rem 14rem;
+    padding: 12rem 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80vh;
 }
 
 .header .mouse-scroll {
@@ -597,9 +601,9 @@ body.menu-open {
     display: flex;
     justify-content: center;
     gap: 5rem;
-    margin-bottom: 5rem;
-    padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 0;
+    padding: 3rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .header-stat {
@@ -654,15 +658,15 @@ body.menu-open {
     color: #fff;
     text-align: center;
     font-family: "montserrat", sans-serif;
-    font-weight: 900;
-    font-size: 6.9rem;
-    line-height: 7rem;
+    font-weight: 700;
+    font-size: 5.5rem;
+    line-height: 6rem;
 }
 
 .extra-lg-text span {
     display: inline-block;
     font-family: "montserrat", sans-serif;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .extra-lg-text .other-color {
@@ -997,8 +1001,9 @@ body.menu-open {
     color: #fff;
     text-align: center;
     font-family: "montserrat", sans-serif;
-    font-size: 5.3rem;
-    line-height: 7rem;
+    font-weight: 700;
+    font-size: 4.25rem;
+    line-height: 5rem;
     margin-bottom: 2.2rem;
 }
 
@@ -1008,11 +1013,13 @@ body.menu-open {
 }
 
 .header .lg-text {
-    font-weight: 900;
+    font-weight: 700;
+    font-size: 5.5rem;
+    line-height: 6rem;
 }
 
 .header .lg-text span {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .default-content .lg-text span {
@@ -2454,9 +2461,10 @@ body.menu-open {
 }
 
 @media (max-width: 992px) {
-    .extra-lg-text {
-        font-size: 4.8rem;
-        line-height: 5.2rem;
+    .extra-lg-text,
+    .header .lg-text {
+        font-size: 5rem;
+        line-height: 5.5rem;
     }
 
     .lg-text {
@@ -2481,7 +2489,11 @@ body.menu-open {
     }
 
     .boxy {
-        padding: 5rem 6rem;
+        padding: 5rem 2rem;
+    }
+
+    .box-content-short .boxy {
+        padding: 5rem 2rem;
     }
 
     .boxy h1.title {
@@ -2775,6 +2787,10 @@ body.menu-open {
     }
 
     /* Nav — switch to hamburger */
+    .cnav-inner {
+        padding: 1.5rem 1.5rem;
+    }
+
     .cnav-links {
         display: none;
     }
@@ -2783,12 +2799,12 @@ body.menu-open {
         display: block;
         top: 2.5rem;
         left: inherit;
-        right: 2rem;
+        right: 1.5rem;
     }
 
     .menu-toggle.open {
         left: inherit;
-        right: 2rem;
+        right: 1.5rem;
     }
 
     /* Header stats — wrap to 2x2 grid */
@@ -2801,6 +2817,14 @@ body.menu-open {
     .header-stat {
         flex: 1 1 40%;
         align-items: flex-start;
+    }
+
+    .stat-number {
+        font-size: 1.9rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
     }
 
     /* Work page grid — 2 columns */
@@ -2942,12 +2966,14 @@ body.menu-open {
     }
 
     .header {
-        padding: 11.5rem 2rem 10rem;
+        padding: 11.5rem 2rem 0;
+        min-height: 70vh;
     }
 
-    .extra-lg-text {
-        font-size: 3.8rem;
-        line-height: 3.5rem;
+    .extra-lg-text,
+    .header .lg-text {
+        font-size: 4rem;
+        line-height: 4.4rem;
     }
 
     .lg-text {
@@ -3299,13 +3325,18 @@ body.menu-open {
         height: 260px;
     }
 
-    .extra-lg-text {
-        font-size: 2.8rem;
-        line-height: 3rem;
+    .extra-lg-text,
+    .header .lg-text {
+        font-size: 3.2rem;
+        line-height: 3.6rem;
     }
 
     .boxy {
-        padding: 5rem 3.5rem;
+        padding: 4rem 2rem;
+    }
+
+    .box-content-short .boxy {
+        padding: 4rem 2rem;
     }
 
     .clients-section {
@@ -3387,13 +3418,15 @@ body.menu-open {
     }
 
     /* Home page mobile fixes */
-    .extra-lg-text {
-        font-size: 2.6rem;
-        line-height: 2.4rem;
+    .extra-lg-text,
+    .header .lg-text {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
     }
 
     .header {
-        padding: 10rem 1.5rem 6rem;
+        padding: 10rem 1.5rem 0;
+        min-height: 60vh;
     }
 
     .header-stats {
@@ -3401,7 +3434,7 @@ body.menu-open {
         flex-wrap: wrap;
         justify-content: flex-start;
         padding-bottom: 2rem;
-        margin-bottom: 3rem;
+        margin-bottom: 0;
     }
 
     .header-stat {
