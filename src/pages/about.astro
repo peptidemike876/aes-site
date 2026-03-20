@@ -5,68 +5,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="About — Amplified Event Strategy"
   description="Founded in 2015, Amplified Event Strategy is a full-service crypto events agency behind 100+ flagship conferences including CoinDesk Consensus, Solana Breakpoint, Nearcon, and the Ondo Summit."
   bodyClass="inner-page">
-  <header class="container-fluid header">
-    <div class="row">
-      <div class="col">
-        <div class="lg-text">
-          <span>WE PRODUCE EVENTS</span><br />
-          <span>THAT MOVE THE</span><br />
-          <span>CRYPTO WORLD.</span>
-        </div>
-      </div>
-    </div>
-    <div class="header-stats-outer">
-      <div class="header-stats">
-        <div class="header-stats-track">
-          <div class="header-stat">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Events Produced</span>
-          </div>
-          <div class="header-stat">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Years in Crypto</span>
-          </div>
-          <div class="header-stat">
-            <span class="stat-number">Global</span>
-            <span class="stat-label">Reach</span>
-          </div>
-          <div class="header-stat">
-            <span class="stat-number">Since 2015</span>
-            <span class="stat-label">Industry Leaders</span>
-          </div>
-          <div class="header-stat" aria-hidden="true">
-            <span class="stat-number">100+</span>
-            <span class="stat-label">Events Produced</span>
-          </div>
-          <div class="header-stat" aria-hidden="true">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">Years in Crypto</span>
-          </div>
-          <div class="header-stat" aria-hidden="true">
-            <span class="stat-number">Global</span>
-            <span class="stat-label">Reach</span>
-          </div>
-          <div class="header-stat" aria-hidden="true">
-            <span class="stat-number">Since 2015</span>
-            <span class="stat-label">Industry Leaders</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
 
   <div class="container-fluid process-section">
     <div class="about-intro">
-      <div class="lg-text"><span>About Us</span></div>
-      <div class="normal-text">
-        <p>Amplified Event Strategy has
+      <div class="about-intro-photo">
+        <img src="/images/work3.png" alt="" />
+      </div>
+      <div class="about-intro-text">
+        <div class="about-bg-text">SINCE 2015</div>
+        <div class="lg-text"><span>About Us</span></div>
+        <div class="normal-text">
+          <p>Amplified Event Strategy has
 been the go-to cryptocurrency
-events agency since 2015.<br />We’ve produced 100+ crypto
+events agency since 2015. We’ve produced 100+ crypto
 events since our 2015 agency
 launch. Our events speak for themselves and we work
 entirely by word of mouth.<br /><br /> Weʼre known for launching influential, flagship crypto events, including the original CoinDesk
 Consensus in 2015; Solana Breakpoint in 2021 2022; and most recently, the Ondo Summit in
 2025.</p>
+        </div>
       </div>
     </div>
     <div class="process-boxes">
@@ -113,90 +70,133 @@ Consensus in 2015; Solana Breakpoint in 2021 2022; and most recently, the Ondo S
     </div>
   </div>
 
+  <div class="about-photo-strip">
+    <div class="aps-photo" style="background-image: url('/images/work2.png')"></div>
+    <div class="aps-photo" style="background-image: url('/images/work5.png')"></div>
+    <div class="aps-photo" style="background-image: url('/images/work8.png')"></div>
+  </div>
+
   <div class="container-fluid team-section">
-    <div class="team-section-header">
-      <div class="lg-text"><span>The Amplified Team</span></div>
-      <p class="team-section-blurb">We are best known for our veteran cryptocurrency and Wall Street event experts. Given our years of hands-on event experience in both the crypto and traditional financial markets sector, we specialize in events targeting developers, institutional investors, crypto enthusiasts and other Web 3 adjacent audiences.</p>
+
+    <!-- Desktop carousel -->
+    <div class="team-carousel-section">
+      <div class="team-carousel-title">The Amplified Team</div>
+
+      <div class="team-carousel-copy">
+        <p>Amplified Event Strategy didn't grow from a boardroom — it grew from a shared obsession with getting things right. Lauren Laino brought the legal precision and Wall Street instincts. Zack and Joon arrived with decade-deep credibility in crypto journalism, having shaped the very conversations the industry would later build around. What started as a loose coalition of specialists became something more deliberate: a group of people who believed that great events don't happen by accident.</p>
+        <p>The early years were defined by proximity to the moments that mattered most — the first Consensus in 2015, the launch of Solana Breakpoint, NearCon finding its identity. Each event brought new collaborators into the fold. Elaine's meticulous eye for speaker logistics, Olivia's ability to turn sponsorship into genuine partnership, Tricia's gift for holding an operation together under pressure. One by one, the team assembled not through hiring cycles, but through shared experiences in the field.</p>
+        <p>Today, that origin still shapes how the team works. There are no rigid silos, no hierarchy that slows decisions down. Everyone at Amplified has been in the room when something went sideways — and knows how to bring it back. That collective memory, built across hundreds of events on multiple continents, is what clients are really hiring when they work with us.</p>
+      </div>
+
+      <div class="team-carousel-wrap">
+        <div class="carousel-viewport" id="carouselViewport">
+          <div class="carousel-track" id="carouselTrack">
+
+            <div class="cc-card"
+              data-name="Lauren Laino" data-title="Founder &amp; CEO" data-photo="/images/Lauren.png"
+              data-bio="Lauren founded Amplified 11+ years ago and is a former lawyer. She brings 20+ years of conference business and Wall Street event experience. She specializes in event strategy and large scale event production, and helped launch Consensus 2015 and the Solana Breakpoint 2021.">
+              <div class="cc-photo"><img src="/images/Lauren.png" alt="Lauren Laino" /></div>
+              <div class="cc-name">Lauren Laino</div>
+              <div class="cc-role">Founder &amp; CEO</div>
+            </div>
+
+            <div class="cc-card"
+              data-name="Elaine Cancelliere" data-title="Speaker Management Lead" data-photo="/images/Elaine.png"
+              data-bio="Elaine has worked on countless crypto events over the last 7 years, procuring the speaker management system for large scale events such as Solana's Breakpoint, NearCon and CoinDesk's Consensus.">
+              <div class="cc-photo"><img src="/images/Elaine.png" alt="Elaine Cancelliere" /></div>
+              <div class="cc-name">Elaine Cancelliere</div>
+              <div class="cc-role">Speaker Management Lead</div>
+            </div>
+
+            <div class="cc-card"
+              data-name="Olivia Fore" data-title="Sponsorship Lead" data-photo="/images/Olivia.png"
+              data-bio="Olivia has managed and produced live events over the past 12 years across fashion, music festivals, crypto and the cruising industry.">
+              <div class="cc-photo"><img src="/images/Olivia.png" alt="Olivia Fore" /></div>
+              <div class="cc-name">Olivia Fore</div>
+              <div class="cc-role">Sponsorship Lead</div>
+            </div>
+
+            <div class="cc-card"
+              data-name="Tricia Gallagher" data-title="Production/Ops Lead" data-photo="/images/Tricia.png"
+              data-bio="Tricia has 20+ years of event production and management experience. She leads all event ops including site selections, budget management, and acts as a liaison between all teams.">
+              <div class="cc-photo"><img src="/images/Tricia.png" alt="Tricia Gallagher" /></div>
+              <div class="cc-name">Tricia Gallagher</div>
+              <div class="cc-role">Production/Ops Lead</div>
+            </div>
+
+            <div class="cc-card"
+              data-name="Zack Seward" data-title="Content Lead" data-photo="/images/Zack.png"
+              data-bio="Zack ran CoinDesk's news coverage as Deputy Editor-in-Chief until July 2022 before transitioning to conference programming. He still appears daily as a commentator on CoinDesk TV.">
+              <div class="cc-photo"><img src="/images/Zack.png" alt="Zack Seward" /></div>
+              <div class="cc-name">Zack Seward</div>
+              <div class="cc-role">Content Lead</div>
+            </div>
+
+            <div class="cc-card"
+              data-name="Joon Ian Wong" data-title="Content Lead" data-photo="/images/Joon.png"
+              data-bio="In the space since 2013, Joon started CoinDesk Consensus in 2015, expanding it globally in 2019. He co-founded the Association of Cryptocurrency Journalists and Researchers.">
+              <div class="cc-photo"><img src="/images/Joon.png" alt="Joon Ian Wong" /></div>
+              <div class="cc-name">Joon Ian Wong</div>
+              <div class="cc-role">Content Lead</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio panel -->
+      <div class="carousel-bio" id="carouselBio">
+        <button class="carousel-bio-close" id="carouselBioClose">×</button>
+        <div class="cb-photo"><img id="cbPhoto" src="" alt="" /></div>
+        <div class="cb-info">
+          <div class="cb-name" id="cbName"></div>
+          <div class="cb-title" id="cbTitle"></div>
+          <p class="cb-bio" id="cbBio"></p>
+        </div>
+      </div>
+
     </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
+
+    <!-- Mobile grid -->
+    <div class="team-mobile-grid">
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Lauren.png" alt="Lauren Laino" /></div>
+        <div class="tmg-name">Lauren Laino</div>
+        <div class="tmg-title">Founder &amp; CEO</div>
+        <p>Lauren founded Amplified 11+ years ago and is a former lawyer. She brings 20+ years of conference business and Wall Street event experience. She helped launch Consensus 2015 and the Solana Breakpoint 2021.</p>
       </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Lauren Laino</div>
-        <div class="team-member-title">Founder & CEO</div>
-        <p>Lauren founded Amplified 11+ years ago and
-is a former lawyer. She brings 20+ years of
-conference business and Wall Street event
-experience to the team. She specializes in
-event strategy and large scale event
-production. She helped launch the first
-Consensus event in 2015 and countless major
-crypto events including the Solana Breakpoint
-2021 launch.</p>
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Elaine.png" alt="Elaine Cancelliere" /></div>
+        <div class="tmg-name">Elaine Cancelliere</div>
+        <div class="tmg-title">Speaker Management Lead</div>
+        <p>Elaine has worked on countless crypto events over the last 7 years, including Solana's Breakpoint, NearCon and CoinDesk's Consensus.</p>
       </div>
-    </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Olivia.png" alt="Olivia Fore" /></div>
+        <div class="tmg-name">Olivia Fore</div>
+        <div class="tmg-title">Sponsorship Lead</div>
+        <p>Olivia has managed and produced live events over the past 12 years across fashion, music festivals, crypto and the cruising industry.</p>
       </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Elaine Cancelliere</div>
-        <div class="team-member-title">Speaker Management Lead</div>
-        <p>Elaine has worked on countless crypto events over the last 7 years,
-procuring the speaker management system for large scale events
-such as Solanaʼs Breakpoint, NearCon and CoinDeskʼs Consensus.</p>
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Tricia.png" alt="Tricia Gallagher" /></div>
+        <div class="tmg-name">Tricia Gallagher</div>
+        <div class="tmg-title">Production/Ops Lead</div>
+        <p>Tricia has 20+ years of event production experience, leading all event ops including site selections, budget management and team liaison.</p>
       </div>
-    </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Zack.png" alt="Zack Seward" /></div>
+        <div class="tmg-name">Zack Seward</div>
+        <div class="tmg-title">Content Lead</div>
+        <p>Former Deputy Editor-in-Chief at CoinDesk, Zack transitioned to conference programming in 2022 and still appears daily on CoinDesk TV.</p>
       </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Olivia Fore</div>
-        <div class="team-member-title">Sponsorship Lead</div>
-        <p>Olivia has managed and produced live events over the past 12 years.
-She has worked in various industries ranging from fashion and
-music festivals to crypto and the cruising industry.</p>
+      <div class="tmg-member">
+        <div class="tmg-photo"><img src="/images/Joon.png" alt="Joon Ian Wong" /></div>
+        <div class="tmg-name">Joon Ian Wong</div>
+        <div class="tmg-title">Content Lead</div>
+        <p>In the space since 2013, Joon started CoinDesk Consensus in 2015, expanded it globally in 2019, and co-founded the Association of Cryptocurrency Journalists and Researchers.</p>
       </div>
     </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
-      </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Trisha Gallagher</div>
-        <div class="team-member-title">Production/Ops Lead</div>
-        <p>Tricia has 20+ years of event production and management
-experience. She leads all event ops and production including site
-selections, budget management, and acts as a liaison between all
-teams.</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
-      </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Zack Seward</div>
-        <div class="team-member-title">Content Lead</div>
-        <p>Zack ran CoinDeskʼs news coverage as Deputy Editor-in-Chief until
-July 2022 before transitioning to conference programming. He still
-appears daily as a commentator on CoinDesk TV.</p>
-      </div>
-    </div>
-    <div class="team-member">
-      <div class="team-member-photo">
-        <div class="photo-placeholder"></div>
-      </div>
-      <div class="team-member-info">
-        <div class="team-member-name">Joon Ian Wong</div>
-        <div class="team-member-title">Content Lead</div>
-        <p>In the space since 2013, Joon started the CoinDesk Consensus
-conference in 2015, expanding it globally in 2019. He co-founded the
-Association of Cryptocurrency Journalists and Researchers.</p>
-      </div>
-    </div>
+
   </div>
 
   <div class="container-fluid history-section">
@@ -271,4 +271,81 @@ Association of Cryptocurrency Journalists and Researchers.</p>
       </div>
     </div>
   </div>
+<script>
+  const track    = document.getElementById('carouselTrack')    as HTMLElement;
+  const wrap     = document.getElementById('carouselViewport') as HTMLElement;
+  const bio      = document.getElementById('carouselBio')      as HTMLElement;
+  const bioClose = document.getElementById('carouselBioClose') as HTMLElement;
+  const cbName   = document.getElementById('cbName')           as HTMLElement;
+  const cbTitle  = document.getElementById('cbTitle')          as HTMLElement;
+  const cbBio    = document.getElementById('cbBio')            as HTMLElement;
+  const cbPhoto  = document.getElementById('cbPhoto')          as HTMLImageElement;
+
+  if (track) {
+    const origCards = Array.from(track.querySelectorAll<HTMLElement>('.cc-card'));
+
+    // Duplicate cards for seamless loop
+    origCards.forEach(card => {
+      const clone = card.cloneNode(true) as HTMLElement;
+      clone.setAttribute('aria-hidden', 'true');
+      track.appendChild(clone);
+    });
+
+    // Measure original set width AFTER clones are added and layout settles
+    let originalWidth = 0;
+    let x = 0;
+    let paused = false;
+
+    function measureWidth() {
+      // Sum of all original card widths + their margins
+      originalWidth = origCards.reduce((sum, card) => {
+        const style = getComputedStyle(card);
+        return sum + card.offsetWidth + parseFloat(style.marginRight);
+      }, 0);
+    }
+
+    function tick() {
+      if (!paused) {
+        x -= 0.5; // pixels per frame — adjust for speed
+        if (x <= -originalWidth) x += originalWidth; // seamless, no reset to 0
+        track.style.transform = `translateX(${x}px)`;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    // Pause on hover
+    wrap?.addEventListener('mouseenter', () => { paused = true; });
+    wrap?.addEventListener('mouseleave', () => { if (!bio.classList.contains('visible')) paused = false; });
+
+    // Click to show bio — delegate to track so clones also respond
+    track.addEventListener('click', (e) => {
+      const card = (e.target as HTMLElement).closest<HTMLElement>('.cc-card');
+      if (!card) return;
+      origCards.forEach(c => c.classList.remove('active'));
+      const orig = origCards.find(c => c.dataset.name === card.dataset.name);
+      if (orig) orig.classList.add('active');
+      cbName.textContent  = card.dataset.name  ?? '';
+      cbTitle.textContent = card.dataset.title ?? '';
+      cbBio.textContent   = card.dataset.bio   ?? '';
+      cbPhoto.src         = card.dataset.photo ?? '';
+      cbPhoto.alt         = card.dataset.name  ?? '';
+      bio.classList.add('visible');
+      paused = true;
+    });
+
+    bioClose?.addEventListener('click', () => {
+      bio.classList.remove('visible');
+      origCards.forEach(c => c.classList.remove('active'));
+      paused = false;
+    });
+
+    // Start after layout
+    requestAnimationFrame(() => {
+      measureWidth();
+      tick();
+    });
+
+    window.addEventListener('resize', measureWidth);
+  }
+</script>
 </BaseLayout>
